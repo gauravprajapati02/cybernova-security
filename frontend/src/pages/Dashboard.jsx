@@ -15,7 +15,7 @@ function Dashboard() {
         try {
 
             const res = await axios.get(
-                "http://localhost:3001/api/complaints"
+                "https://cybernova-api.onrender.comapi/complaints"
             );
 
             setComplaints(res.data);

@@ -22,7 +22,7 @@ function AdminPanel() {
     try {
 
       const res = await axios.get(
-        "http://localhost:3001/api/complaints"
+        "https://cybernova-api.onrender.comapi/complaints"
       );
 
       console.log(res.data);
@@ -45,7 +45,7 @@ function AdminPanel() {
     try {
 
       await axios.put(
-        `http://localhost:3001/api/complaints/${id}`,
+        `https://cybernova-api.onrender.comapi/complaints/${id}`,
         { status }
       );
 

@@ -22,7 +22,7 @@ function Login() {
 
       const res = await axios.post(
 
-        "http://localhost:3001/api/auth/login",
+        "https://cybernova-api.onrender.com/api/auth/login",
 
         {
           email,

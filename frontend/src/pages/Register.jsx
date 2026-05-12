@@ -21,7 +21,7 @@ function Register() {
     try {
 
         const res = await axios.post(
-            "http://localhost:3001/api/auth/register",
+            "https://cybernova-api.onrender.com/api/auth/register",
             {
                 name,
                 email,

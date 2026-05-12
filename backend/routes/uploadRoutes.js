@@ -69,7 +69,7 @@ router.post(
       }
 
       const avatar =
-        `http://localhost:3001/uploads/${req.file.filename}`;
+        `https://cybernova-api.onrender.com/uploads/${req.file.filename}`;
 
       const updatedUser =
         await User.findByIdAndUpdate(

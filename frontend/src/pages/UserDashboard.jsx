@@ -26,7 +26,7 @@ function UserDashboard() {
 
       const res = await axios.get(
 
-        "http://localhost:3001/api/complaints"
+        "https://cybernova-api.onrender.com/api/complaints"
 
       );
 

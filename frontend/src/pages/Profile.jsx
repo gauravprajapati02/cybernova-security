@@ -37,7 +37,7 @@ function Profile() {
       const res =
         await axios.post(
 
-          "http://localhost:3001/api/upload/avatar",
+          "https://cybernova-api.onrender.comapi/upload/avatar",
 
           formData
 
