@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
-
+const API = process.env.REACT_APP_API_URL;
 function Register() {
 
   const navigate = useNavigate();
@@ -21,13 +21,13 @@ function Register() {
     try {
 
         const res = await axios.post(
-            "https://cybernova-api.onrender.com/api/auth/register",
-            {
-                name,
-                email,
-                password,
-            }
-        );
+  `${API}/api/auth/register`,
+  {
+    name,
+    email,
+    password,
+  }
+);
 
         console.log(res.data);
 

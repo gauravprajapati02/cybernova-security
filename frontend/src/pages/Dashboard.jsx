@@ -4,7 +4,7 @@ import axios from "axios";
 import Sidebar from "../components/Sidebar";
 import GenerateReport from "../components/GenerateReport";
 import StatsChart from "../components/StatsChart";
-
+const API = process.env.REACT_APP_API_URL;
 function Dashboard() {
 
     const [complaints, setComplaints] = useState([]);
@@ -14,9 +14,9 @@ function Dashboard() {
 
         try {
 
-            const res = await axios.get(
-                "https://cybernova-api.onrender.comapi/complaints"
-            );
+          const res = await axios.get(
+  `${API}/api/complaints`
+);
 
             setComplaints(res.data);
 

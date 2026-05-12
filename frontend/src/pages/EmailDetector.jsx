@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import axios from "axios";
-
+const API = process.env.REACT_APP_API_URL;
 function EmailDetector() {
 
     const [email, setEmail] = useState("");
@@ -13,11 +13,11 @@ function EmailDetector() {
         try {
 
             const res = await axios.post(
-                "https://cybershield-ai-a1lg.onrender.com/email-predict",
-                {
-                    email,
-                }
-            );
+  `${API}/email-predict`,
+  {
+    email,
+  }
+);
 
             setResult(res.data);
 

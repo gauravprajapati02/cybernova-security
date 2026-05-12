@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import axios from "axios";
-
+const API = process.env.REACT_APP_API_URL;
 function ThreatHistory() {
 
   const [history, setHistory] =
@@ -22,11 +22,9 @@ function ThreatHistory() {
 
     try {
 
-      const res = await axios.get(
-
-        `https://cybernova-api.onrender.com/api/threats/user/${user.email}`
-
-      );
+   const res = await axios.get(
+  `${API}/api/threats/user/${user.email}`
+);
 
       setHistory(res.data);
 

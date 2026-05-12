@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import axios from "axios";
-
+const API = process.env.REACT_APP_API_URL;
 function Profile() {
 
   const storedUser =
@@ -34,14 +34,11 @@ function Profile() {
 
     try {
 
-      const res =
-        await axios.post(
-
-          "https://cybernova-api.onrender.comapi/upload/avatar",
-
-          formData
-
-        );
+    const res =
+  await axios.post(
+    `${API}/api/upload/avatar`,
+    formData
+  );
 
       localStorage.setItem(
 

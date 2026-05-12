@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import axios from "axios";
-
+const API = process.env.REACT_APP_API_URL;
 function Complaint() {
 
   const user = JSON.parse(
@@ -80,11 +80,10 @@ function Complaint() {
       }
 
       const res =
-        await axios.post(
-
-          "https://cybernova-api.onrender.com/api/complaints",
-
-          formData,
+  await axios.post(
+    `${API}/api/complaints`,
+    formData
+  );
 
           {
             headers: {

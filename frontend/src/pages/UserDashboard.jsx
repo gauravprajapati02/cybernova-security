@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import jsPDF from "jspdf";
-
+const API = process.env.REACT_APP_API_URL;
 function UserDashboard() {
 
   const [complaints, setComplaints] =
@@ -23,11 +23,9 @@ function UserDashboard() {
 
     try {
 
-      const res = await axios.get(
-
-        "https://cybernova-api.onrender.com/api/complaints"
-
-      );
+   const res = await axios.get(
+  `${API}/api/complaints`
+);
 
       const userComplaints =
         res.data.filter(

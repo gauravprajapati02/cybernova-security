@@ -5,7 +5,7 @@ import axios from "axios";
 import Sidebar from "../components/Sidebar";
 
 import StatsChart from "../components/StatsChart";
-
+const API = process.env.REACT_APP_API_URL;
 function AdminPanel() {
 
   const [complaints, setComplaints] =
@@ -22,9 +22,8 @@ function AdminPanel() {
     try {
 
       const res = await axios.get(
-        "https://cybernova-api.onrender.comapi/complaints"
-      );
-
+  `${API}/api/complaints`
+);
       console.log(res.data);
 
       setComplaints(res.data);
@@ -44,10 +43,12 @@ function AdminPanel() {
 
     try {
 
-      await axios.put(
-        `https://cybernova-api.onrender.comapi/complaints/${id}`,
-        { status }
-      );
+     await axios.put(
+  `${API}/api/complaints/${id}`,
+  { status }
+);
+
+
 
       fetchComplaints();
 
