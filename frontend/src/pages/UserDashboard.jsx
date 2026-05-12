@@ -14,12 +14,11 @@ function UserDashboard() {
       localStorage.getItem("user")
     );
 
-  useEffect(() => {
+ useEffect(() => {
+  fetchComplaints();
 
-    fetchComplaints();
-
-  }, []);
-
+// eslint-disable-next-line
+}, []);
   const fetchComplaints = async () => {
 
     try {

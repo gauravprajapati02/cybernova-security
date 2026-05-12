@@ -13,9 +13,9 @@ function ThreatHistory() {
     );
 
   useEffect(() => {
-
     fetchHistory();
 
+    // eslint-disable-next-line
   }, []);
 
   const fetchHistory = async () => {
